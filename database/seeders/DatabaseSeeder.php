@@ -2,9 +2,10 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Models\Movie;
 use App\Models\User;
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,19 +14,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Panggil seeder lain jika ada
-        $this->call([
-            CategorySeeder::class,
-            // Tambahkan seeder lain jika ada, misal: UserSeeder::class
+        User::factory(3)->create();
+
+                // $this->call(CategorySeeder::class);
+                // Movie::factory(50)->create();
+
+        User::factory()->create([
+            'name' => 'Test User',
+            'email' => 'test@example.com',
         ]);
-
-        // Buat data dummy untuk tabel movies
-        Movie::factory(50)->create();
-
-        // Contoh buat 1 user khusus (opsional, bisa diaktifkan kalau mau)
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-    }
+     }
 }
