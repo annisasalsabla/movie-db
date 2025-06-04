@@ -34,12 +34,13 @@
   </li>
 
   <li class="nav-item">
-    <form action="{{ route('logout') }}" method="POST">
-      @csrf
-      <button type="submit" class="nav-link btn btn-link text-white" style="text-decoration: none;">
-        Logout
-      </button>
-    </form>
+   <form action="{{ route('logout') }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin logout?')">
+  @csrf
+  <button type="submit" class="nav-link btn btn-link text-white" style="text-decoration: none;">
+    Logout
+  </button>
+</form>
+
   </li>
 @else
   <li class="nav-item">
@@ -78,10 +79,10 @@
             </li>--}}
           </ul>
 
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search movies..." aria-label="Search" />
-            <button class="btn btn-light" type="submit">Search</button>
-          </form>
+         <form class="d-flex" role="search" action="{{ url('/') }}" method="GET">
+  <input class="form-control me-2" type="search" name="search" placeholder="Search movies..." aria-label="Search" />
+  <button class="btn btn-light" type="submit">Search</button>
+</form>
         </div>
       </div>
     </nav>
@@ -93,7 +94,7 @@
 
     <!-- Footer -->
     <footer class="bg-success text-white text-center py-3">
-      &copy; 2025 Developed by Annisa
+      &copy; 2025 Developed by Nashwa
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
