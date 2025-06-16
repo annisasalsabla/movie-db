@@ -81,7 +81,7 @@
 
          <form class="d-flex" role="search" action="{{ url('/') }}" method="GET">
   <input class="form-control me-2" type="search" name="search" placeholder="Search movies..." aria-label="Search" />
-  <button class="btn btn-light" type="submit">Search</button>
+  <button class="btn btn-light" type="submit">😺Search</button>
 </form>
         </div>
       </div>
@@ -94,7 +94,7 @@
 
     <!-- Footer -->
     <footer class="bg-success text-white text-center py-3">
-      &copy; 2025 Developed by Nashwa
+      &copy; 2025 Developed by Annisa
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
